@@ -25,13 +25,7 @@ export default function HomePage() {
     visible: { opacity: 1, y: 0 },
   };
 
-  const containerVariants = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: { opacity: 1, scale: 1 }
-  };
-
-
-  
+ 
 
   return (<>
 {/* تحت navbar */}
