@@ -1,0 +1,287 @@
+
+ul li a:hover{
+  color: #ccaf55 !important;
+}
+
+header{
+  background-image: url(../src/img/photo_5899900492258068399_y.jpg);
+  height: 100vh ;
+  background-size: cover;
+  background-position: center;
+  
+}
+.btn-custom{
+  display: inline-block;
+  padding: 10px 21px;
+  border: 2px solid #ccaf55; /* اللون الذهبي */
+  border-radius: 33px;
+  background-color: transparent;
+  color: #ccaf55;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-custom:hover {
+  background-color: #ccaf55;
+  color: #ffffff;
+}
+
+
+/* {/* تحت navbar */ 
+
+  /*--------------------------------------------------------------
+  # فريقنا
+  --------------------------------------------------------------*/
+  .services .service-item {
+    background-color: #ffffff;
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1);
+    padding: 60px 30px 60px 70px;
+    transition: all ease-in-out 0.3s;
+    border-radius: 18px;
+    height: 100% ;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .services .service-item .icon {
+    position: absolute;
+    left: -20px;
+    top: calc(50% - 30px);
+  }
+  
+  .services .service-item h3 {
+    font-weight: 700;
+    margin: 10px 0 15px 0;
+    font-size: 22px;
+    transition: ease-in-out 0.3s;
+  }
+  
+  .services .service-item p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  
+  @media (min-width: 1365px) {
+    .services .service-item:hover {
+      transform: translateY(-10px);
+    }
+  
+    .services .service-item:hover h3 {
+      color: var(--accent-color);
+    }
+  }
+/*   
+  .item-hover {
+    transition: all ease-in-out 0.3s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+ */
+  
+  
+
+
+  /*--------------------------------------------------------------
+  --------------------------------------------------------------*/
+
+
+ 
+ /* فريقنا */
+  .team-item {
+    border-top: 30px solid rgba(8, 133, 112, 0.1) !important;
+    background: rgba(239, 239, 241, 0.8);
+  }
+  
+  .team-content::before {
+    height: 200px;
+    display: block;
+    content: "";
+    position: relative;
+    top: -101px;
+    background: #0e776a;
+    clip-path: polygon(50% 50%, 100% 50%, 50% 100%, 0% 50%);
+    padding: 60px;
+    opacity: 1;
+  }
+  
+  .team-img-icon {
+    position: relative;
+    margin-top: -200px;
+    padding: 30px;
+    padding-bottom: 0;
+  }
+  
+  .team-img {
+    border: 15px solid white;
+  }
+  
+  .team-img img {
+    border: 10px solid #0e776a;
+    transition: .5s;
+  }
+  
+  .team-item:hover h4 {
+    color: #0e776a;
+    transition: .5s;
+  }
+  
+  .team-item:hover .team-img img {
+    transform: scale(1.09);
+    border: 10px solid #0e776a;
+  }
+  
+  
+
+
+  .services .service-item {
+    background-color: #ffffff;
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1);
+    padding: 60px 30px 60px 70px;
+    transition: all ease-in-out 0.3s;
+    border-radius: 18px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .services .service-item .icon {
+    position: absolute;
+    left: -20px;
+    top: calc(50% - 30px);
+  }
+  
+  .services .service-item h3 {
+    font-weight: 700;
+    margin: 10px 0 15px 0;
+    font-size: 22px;
+    transition: ease-in-out 0.3s;
+  }
+  
+  .services .service-item p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  
+  @media (min-width: 1365px) {
+    .services .service-item:hover {
+      transform: translateY(-10px);
+    }
+  
+    .services .service-item:hover h3 {
+      color: var(--accent-color);
+    }
+  }
+
+  .item-hover {
+    transition: all ease-in-out 0.3s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+
+
+
+ 
+  
+
+
+  .team .member {
+    background-color: #ffffff;
+    box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 15px;
+    padding: 15px;
+    overflow: hidden;
+  }
+  
+  .team .member img {
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .team .member .member-content {
+    padding: 0 20px 30px 20px;
+  }
+  
+  .team .member h4 {
+    font-weight: 700;
+    margin-top: 16px;
+    margin-bottom: 2px;
+    font-size: 20px;
+  }
+  
+  .team .member span {
+    font-style: italic;
+    display: block;
+    font-size: 14px;
+    color: color-mix(in srgb, #222222, transparent 40%);
+  }
+  
+  .team .member .social {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .team .member .social .link-styles {
+    color: color-mix(in srgb, #222222, transparent 60%);
+    transition: 0.3s;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid color-mix(in srgb, #643333, transparent 60%);
+    text-decoration: none;
+  }
+  
+  .team .member .social .link-styles:hover {
+    background-color: #008374 ;
+    border-color: #008374;
+    color: #ffffff;
+
+  }
+  
+  .team .member .social i {
+    font-size: 18px;
+    margin: 0 2px;    
+  }
+
+
+
+
+  /* contacts  كن علي اتصال دائم بنا */
+
+
+.pointer {
+  cursor: pointer;
+}
+
+.footer-end{
+background-color:#243f3b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
