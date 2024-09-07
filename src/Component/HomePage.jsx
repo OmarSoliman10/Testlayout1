@@ -54,7 +54,7 @@ export default function HomePage() {
 
           {/* العنوان مع الحركة */}
           <motion.h2
-            className='my-2 text-center '
+            className='my-2 text-center fw-bolder'
             ref={ref}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
@@ -66,7 +66,7 @@ export default function HomePage() {
 
           {/* الفقرة الأولى مع الحركة */}
           <motion.p
-            className='m-0 pt-2 fw-bold text-center'
+            className='m-0 pt-2 fw-bolder text-center'
             ref={ref}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
@@ -78,7 +78,7 @@ export default function HomePage() {
 
           {/* الفقرة الثانية مع الحركة */}
           <motion.p
-            className='m-0 fw-bold text-center'
+            className='m-0 fw-bolder text-center'
             ref={ref}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}

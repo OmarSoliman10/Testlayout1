@@ -8,6 +8,7 @@ import { useInView } from 'react-intersection-observer';
 
 
 export default function Possibilities() {
+
     const { ref: titleRef, inView: titleInView } = useInView({
         triggerOnce: true,
         threshold: 0.2,
@@ -55,9 +56,12 @@ export default function Possibilities() {
       
         return (
           <div  style={{ textAlign: 'center', color: 'white' }}>
-            <FontAwesomeIcon icon={icon} size="2x" style={{ marginBottom: '10px' , color:"#ccaf55" }} />
-            <h1>+{count}</h1>
-            <h5>{label}</h5>
+            <FontAwesomeIcon icon={icon} style={{ fontSize:"2rem", marginBottom: '10px' , color:"#ccaf55" }} />
+            <h5 className='fs-1'>+{count}</h5>
+            <p 
+                className='m-0 fw-bolder ' 
+                style={{ fontSize: window.innerWidth < 768 ? "0.9rem" : "1.5rem" }}>{label}
+            </p>          
           </div>
         );
       };
@@ -75,7 +79,7 @@ export default function Possibilities() {
           className='fw-bolder'
           style={{ color: "#0e776a" }}
         >
-          احصائيات
+          احصائيات!
         </motion.h1>
 
         {/* حركة الفقرة */}
