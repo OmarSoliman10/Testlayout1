@@ -3,8 +3,8 @@ import ServiceUs from './ServiceUs';
 
 import Contact from './Contact';
 
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+// import { motion } from 'framer-motion';
+// import { useInView } from 'react-intersection-observer';
 import OfferYou from './OfferYou';
 import Possibilities from './Possibilities';
 import heroBg from '../img/hero-bg-2.jpg'; // استيراد الصورة
@@ -12,20 +12,20 @@ import heroImg from '../img/hero-img.png'; // استيراد الصورة
 
 export default function HomePage() {
 
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.3,
-  });
+  // const { ref, inView } = useInView({
+  //   triggerOnce: true,
+  //   threshold: 0.3,
+  // });
 
-  const textVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
-  };
+  // const textVariants = {
+  //   hidden: { opacity: 0, y: 50 },
+  //   visible: { opacity: 1, y: 0 },
+  // };
 
-  const imageVariants = {
-    hidden: { opacity: 0, y: -50 },
-    visible: { opacity: 1, y: 0 },
-  };
+  // const imageVariants = {
+  //   hidden: { opacity: 0, y: -50 },
+  //   visible: { opacity: 1, y: 0 },
+  // };
 
  
 
