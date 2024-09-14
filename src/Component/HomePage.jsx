@@ -7,6 +7,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import OfferYou from './OfferYou';
 import Possibilities from './Possibilities';
+import heroBg from '../img/hero-bg-2.jpg'; // استيراد الصورة
+import heroImg from '../img/hero-img.png'; // استيراد الصورة
 
 export default function HomePage() {
 
@@ -28,63 +30,52 @@ export default function HomePage() {
  
 
   return (<>
-{/* تحت navbar */}
-<header className="d-flex justify-content-center align-items-center">
-      <div className="header-content text-white ps-4 ">
-        <div className="social-container py-1 text-center">
 
-          <motion.h1
-            className='text-center fw-bolder'
-            style={{fontSize:"4rem" ,letterSpacing:"8px"}}
-            ref={ref}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={imageVariants}
-            transition={{ duration: 1 }}
-          >
-          LAYOUT
-          </motion.h1>
+    <section id="hero" class="hero section dark-background">
+      <img src={heroBg} alt="" className="hero-bg w-100" />
 
+      <div class="container">
+        <div class="row gy-4 justify-content-between">
+          
+        <div 
+          className="col-lg-4 order-lg-last hero-img" 
+          data-aos="zoom-out" 
+          data-aos-delay="100" 
+          style={{ display: window.innerWidth <= 768 ? 'none' : 'block' }}>
+          <img src={heroImg} className="img-fluid animated" alt="" />
+        </div>
 
-          {/* العنوان مع الحركة */}
-          <motion.h2
-            className='my-2 text-center fw-bolder'
-            ref={ref}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={textVariants}
-            transition={{ duration: 1 }}
-          >
-            شركة تسويق إلكتروني
-          </motion.h2>
+          <div class="col-lg-6  d-flex flex-column justify-content-center " data-aos="fade-in">
+            <h1 className='fw-bolder'>LAYOUT </h1>
+            <span className='fs-1 fw-bold w-75 my-2' >شركة تسويق إلكتروني</span>
+            <p className='mt-2 fw-bold '>نقدم حلول مبتكرة واستراتيجيات مدروسة لتحويل علامتك التجارية الى رمز يثق به الناس.</p>
 
-          {/* الفقرة الأولى مع الحركة */}
-          <motion.p
-            className='m-0 pt-2 fw-bolder text-center'
-            ref={ref}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={textVariants}
-            transition={{ duration: 1.2 }}
-          >
-            نقدم حلول مبتكرة واستراتيجيات مدروسة
-          </motion.p>
-
-          {/* الفقرة الثانية مع الحركة */}
-          <motion.p
-            className='m-0 fw-bolder text-center'
-            ref={ref}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={textVariants}
-            transition={{ duration: 1.4 }}
-          >
-            لتحويل علامتك التجارية الى رمز يثق به الناس
-          </motion.p>
+          </div>
 
         </div>
       </div>
-</header>
+
+      <svg className="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+        <defs>
+          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"></path>
+        </defs>
+        <g className="wave1">
+          <use xlinkHref="#wave-path" x="50" y="3"></use>
+        </g>
+        <g className="wave2">
+          <use xlinkHref="#wave-path" x="50" y="0"></use>
+        </g>
+        <g className="wave3">
+          <use xlinkHref="#wave-path" x="50" y="9"></use>
+        </g>
+      </svg>
+
+
+    </section>
+
+{/* تحت navbar */}
+
+
 
 {/* نقدم لك؟ */}
 <OfferYou />

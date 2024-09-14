@@ -20,6 +20,11 @@ export default function ServiceUs() {
     visible: { opacity: 1, scale: 1 }
   };
 
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 }
+  };
+
   return (
     <>
       <section className='py-5 services' style={{ backgroundColor: "#f5fbff" }}>
@@ -52,70 +57,34 @@ export default function ServiceUs() {
           transition={{ duration: 1 }}
         >
           <div className='row g-4'>
-            <div className="col-md-4">
-              <div className="service-item position-relative border rounded-3 shadow h-100 py-3 px-5">
-                <div className="img">
-                  <img src={motion1} className='w-100' alt="Marketing Management" />
+            {[
+              { img: motion1, title: 'تسويق وإدارة المنصات', desc: 'نقوم بإدارة منصات التواصل الاجتماعي وإنشاء الحملات التسويقية المناسبة' },
+              { img: web, title: 'تصميم المواقع الإلكترونية', desc: 'نقوم بتصميم وبرمجة المواقع التعريفية والخدمية والمتاجر الإلكترونية' },
+              { img: mob, title: 'تصميم تطبيقات الجوال', desc: 'تقوم بتصميم وبرمجة تطبيقات الجوال مهما كانت الفكرة صغيرة أم كبيرة' },
+              { img: target, title: 'مونتاج وموشن جرافيك', desc: 'نقوم بعمل فيديوهات تسويقية مونتاج أو موشن جرافيك بأحدث الأساليب' },
+              { img: graphic, title: 'تصميم الجرافيك', desc: 'نقوم بتصميم الشعارات والهوية التجارية وجميع ما يخص التصميم الجرافيكي' },
+              { img: seo, title: 'تحسين محركات البحث', desc: 'نقوم بعمل SEO لموقعك لزيادة فرصة وصول عملاء جدد وزيادة أرباحك.' },
+            ].map((service, index) => (
+              <motion.div
+                key={index}
+                className="col-md-4"
+                variants={itemVariants}
+                initial="hidden"
+                animate={inView ? "visible" : "hidden"}
+                transition={{ duration: 1, delay: index * 0.2 }}
+              >
+                <div className="service-item position-relative border rounded-3 shadow h-100 py-3 px-5">
+                  <div className="img">
+                    <img src={service.img} className='w-100' alt={service.title} />
+                  </div>
+                  <h4 className='mb-4 mt-3 fw-bolder'>{service.title}</h4>
+                  <p className='fw-bolder'>{service.desc}</p>
                 </div>
-                <h4 className='mb-4 mt-3 fw-bolder'>تسويق وإدارة المنصات</h4>
-                <p className='fw-bold'>نقوم بإدارة منصات التواصل الاجتماعي وإنشاء الحملات التسويقية المناسبة</p>
-              </div>
-            </div>
-
-            <div className="col-md-4">
-              <div className="service-item position-relative border rounded-3 shadow h-100 py-4 px-5">
-                <div className="img">
-                  <img src={web} className='w-100' alt="Web Design" />
-                </div>
-                <h4 className='mb-4 mt-3 fw-bolder'>تصميم المواقع الإلكترونية</h4>
-                <p className='m-0 fw-bold'>نقوم بتصميم وبرمجة المواقع التعريفية والخدمية والمتاجر الإلكترونية</p>
-              </div>
-            </div>
-
-            <div className="col-md-4">
-              <div className="service-item position-relative border rounded-3 shadow h-100 py-4 px-5">
-                <div className="img">
-                  <img src={mob} className='w-100' alt="Mobile Apps" />
-                </div>
-                <h4 className='mb-4 mt-3 fw-bolder'>تصميم تطبيقات الجوال</h4>
-                <p className='m-0 fw-bold'>تقوم بتصميم وبرمجة تطبيقات الجوال مهما كانت الفكرة صغيرة أم كبيرة</p>
-              </div>
-            </div>
-
-            <div className="col-md-4">
-              <div className="service-item position-relative border rounded-3 shadow h-100 py-4 px-5">
-                <div className="img">
-                  <img src={target} className='w-100' alt="Motion Graphics" />
-                </div>
-                <h4 className='mb-4 mt-3 fw-bolder'>مونتاج وموشن جرافيك</h4>
-                <p className='m-0 fw-bold'>نقوم بعمل فيديوهات تسويقية مونتاج أو موشن جرافيك بأحدث الأساليب</p>
-              </div>
-            </div>
-
-            <div className="col-md-4">
-              <div className="service-item position-relative border rounded-3 shadow h-100 py-4 px-5">
-                <div className="img">
-                  <img src={graphic} className='w-100' alt="Graphic Design" />
-                </div>
-                <h4 className='mb-4 mt-3 fw-bolder'>تصميم الجرافيك</h4>
-                <p className='m-0 fw-bold'>نقوم بتصميم الشعارات والهوية التجارية وجميع ما يخص التصميم الجرافيكي</p>
-              </div>
-            </div>
-
-            <div className="col-md-4">
-              <div className="service-item position-relative border rounded-3 shadow h-100 py-4 px-5">
-                <div className="img mt-3">
-                  <img src={seo} className='w-100' alt="SEO" />
-                </div>
-                <h4 className='mb-4 mt-3 fw-bolder'>تحسين محركات البحث</h4>
-                <p className='m-0 fw-bold'>نقوم بعمل SEO لموقعك لزيادة فرصة وصول عملاء جدد وزيادة أرباحك.</p>
-              </div>
-            </div>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </section>
-
-
     </>
   );
 }
