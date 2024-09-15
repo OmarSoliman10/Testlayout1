@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Testlayout1/static/css/main.d5be3c6d.css",
-    "main.js": "/Testlayout1/static/js/main.9063f0f0.js",
+    "main.css": "/Testlayout1/static/css/main.2dddfe66.css",
+    "main.js": "/Testlayout1/static/js/main.27318cf0.js",
     "static/media/fa-solid-900.ttf": "/Testlayout1/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
     "static/media/4737427.jpg": "/Testlayout1/static/media/4737427.d005de234180ed82937d.jpg",
     "static/media/mob.png": "/Testlayout1/static/media/mob.afe48acea97ae719f153.png",
@@ -12,7 +12,6 @@
     "static/media/fa-solid-900.woff2": "/Testlayout1/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
     "static/media/graphic.png": "/Testlayout1/static/media/graphic.c4dcbae649061f70da25.png",
     "static/media/fa-brands-400.woff2": "/Testlayout1/static/media/fa-brands-400.bb8d5a145e22822103fb.woff2",
-    "static/media/photo__y.jpg": "/Testlayout1/static/media/photo_5899900492258068399_y.6b11cce8ce863f209b11.jpg",
     "static/media/target.png": "/Testlayout1/static/media/target.a2fca94a3aa0bf55f4aa.png",
     "static/media/hero-bg-2.jpg": "/Testlayout1/static/media/hero-bg-2.cf4020a52530d84542a8.jpg",
     "static/media/fa-regular-400.ttf": "/Testlayout1/static/media/fa-regular-400.17a6e1aebccdbaa39e78.ttf",
@@ -23,11 +22,11 @@
     "static/media/fa-v4compatibility.ttf": "/Testlayout1/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
     "static/media/fa-v4compatibility.woff2": "/Testlayout1/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/Testlayout1/index.html",
-    "main.d5be3c6d.css.map": "/Testlayout1/static/css/main.d5be3c6d.css.map",
-    "main.9063f0f0.js.map": "/Testlayout1/static/js/main.9063f0f0.js.map"
+    "main.2dddfe66.css.map": "/Testlayout1/static/css/main.2dddfe66.css.map",
+    "main.27318cf0.js.map": "/Testlayout1/static/js/main.27318cf0.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5be3c6d.css",
-    "static/js/main.9063f0f0.js"
+    "static/css/main.2dddfe66.css",
+    "static/js/main.27318cf0.js"
   ]
 }
