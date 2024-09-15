@@ -15,28 +15,6 @@ import LOGO from '../../src/img//LOGO.png';
 
 export default function HomePage() {
 
-
-  // const textVariant = {
-  //   hidden: { opacity: 0, x: -100 },
-  //   visible: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut" } },
-  // };
-
-  // const logoVariant = {
-  //   hidden: { opacity: 0, y: -100 },  // تبدأ من الأعلى (y: -100)
-  //   visible: { opacity: 1, y: 0, transition: { duration: 1.3, ease: "easeOut" } },
-  // };
-
-  // const imgVariant = {
-  //   hidden: { opacity: 0, scale: 0.8 },
-  //   visible: { opacity: 1, scale: 1, transition: { duration: 1.2, ease: "easeOut" } },
-  // };
-
-
-  // const paragraphVariant = {
-  //   hidden: { opacity: 0, y: 100 },
-  //   visible: { opacity: 1, y: 0, transition: { duration: 1.3, ease: "easeOut" } },
-  // };
-
   const { ref, inView } = useInView({
     triggerOnce: true,  // الحركة تحدث مرة واحدة فقط
     threshold: 0.01,    // النسبة المطلوبة لظهور العنصر على الشاشة (1% من العنصر يجب أن يكون مرئيًا)
@@ -121,7 +99,6 @@ export default function HomePage() {
         </g>
       </motion.svg>
 </section>
-
 
 {/* نقدم لك؟ */}
 <OfferYou />
