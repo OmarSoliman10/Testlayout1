@@ -14,10 +14,7 @@ export default function OfferYou() {
   };
 
   const styles = {
-    // heading: {
-    //   color: "#0e776a",
-    //   fontSize: "2rem", // حجم الخط الأساسي
-    // },
+
     subheading: {
       fontSize: "1rem", // حجم الخط الأساسي
       '@media (min-width: 768px)': { // للأجهزة المتوسطة والكبيرة
@@ -73,7 +70,7 @@ export default function OfferYou() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            أهدافنا.. هي امتلاكنا لعدد كبير من المميزات حتى نتميز عن منافسينا
+          ما يميزنا ... لنكون الشريك التسويقي الافضل للشركات العالمية
           </motion.p>
         </div>
 
@@ -88,29 +85,28 @@ export default function OfferYou() {
           <div className="row gy-4 text-center">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div className="service-item position-relative" style={styles.serviceItem}>
-                <i className="fa-regular fa-handshake" style={styles.icon}></i>
-                <h3 style={{ color: "#0e776a" }}>تقديم حلول عصرية</h3>
+                <i className="fa-regular fa-lightbulb" style={styles.icon}></i>
+                <h3 style={{ color: "#0e776a" }}>افكار ابداعية</h3>
                 <p className='fs-6 fw-bold'>
-                نتميز في لاي أوت بتقديم كافة الحلول العصرية ومتابعة أحدث التطورات في عالم التسويق الرقمي والسوشيال ميديا، مع تقديم مقترحات لنمو أعمالك في كافة المجالات وتقديم خطة تسويقية متكاملة.                </p>
+                تمتلك لاي اوت فريق يتميز بالابداع، ويهتم بتطوير الذات ومتابعة كل جديد؛ ليقدم حلول تسويقية حديثة تؤدي الى نمو الاعمال التجارية فى كافة المجالات.                  </p>
               </div>
             </div>
 
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div className="service-item position-relative" style={styles.serviceItem}>
                 <i className="fa-solid fa-display" style={styles.icon}></i>
-                <h3 style={{ color: "#0e776a" }}>تقديم خدمات متكاملة</h3>
+                <h3 style={{ color: "#0e776a" }}>خدمات متكاملة</h3>
                 <p className='fs-6 fw-bold'>
-                نمتلك في لاي أوت فريق متخصص في كافة الخدمات التسويقية متخصص في الحملات الاعلانية، الموشن جرافيك، إدارة صفحات السوشيال ميديا، كتابة المحتوى الرقمي وغيرها من الخدمات المتكاملة.                </p>
+                توفر لاي اوت لعملائها جميع انواع الخدمات التسويقية فى مكان واحد، حيث لديها متخصصين فى كل من الحملات الاعلانية، الجرافيك والموشن جرافيك، إدارة الصفحات، كتابة المحتوي غيرها من الخدمات.                     </p>
               </div>
             </div>
 
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div className="service-item position-relative" style={styles.serviceItem}>
                 <i className="fa-solid fa-arrow-trend-up" style={styles.icon}></i>
-                <h3 style={{ color: "#0e776a" }}>التسويق وإعداد التقارير</h3>
+                <h3 style={{ color: "#0e776a" }}>خطط وتقارير</h3>
                 <p className='fs-6 fw-bold'>
-                  لدينا متخصصين لإدارة حسابتكم علي جميع منصات التواصل الاجتماعي واقامة الحملات الاعلانية الممولة.
-                </p>
+                نسير على خطط تسويقية شاملة لتحقيق اهداف العميل، يعمل على وضعها فريق متخصص وعلى قدر من الخبرة والكفاءه فى مجال التسويق، ونضع  التقارير النهائيه التى تبرز نجاح خططنا.                </p>
               </div>
             </div>
 
@@ -119,8 +115,7 @@ export default function OfferYou() {
                 <i className="fa-solid fa-mobile-screen-button" style={styles.icon}></i>
                 <h3 style={{ color: "#0e776a" }}>متابعة بعد انتهاء العمل</h3>
                 <p className='fs-6 fw-bold'>
-                  فريق خدمة عملاء متكامل ويبقى على تواصل معك بعد إستلام العمل لضمان سير العمل بشكل صحيح ومدى رضاءك عن جودة فريقنا.
-                </p>
+                نبقى على تواصل مع عملاءنا بعد انتهاء الخدمة لضمان سير العمل بشكل صحيح، وتحقيق النتائج المرجوة، حرصا على رضى العملاء عن خدمتنا.                </p>
               </div>
             </div>
 
@@ -129,8 +124,7 @@ export default function OfferYou() {
                 <i className="fa-solid fa-phone" style={styles.icon}></i>
                 <h3 style={{ color: "#0e776a" }}>خدمة عملاء متميزة</h3>
                 <p className='fs-6 fw-bold'>
-                  خدمة عملاء متصلون على مدار الساعة لتلقى طلباتكم واستفساراتكم والرد عليها سواء من خلال الواتساب، السوشيال ميديا، الايميل الإلكتروني.
-                </p>
+                خدمة عملاء متصلون على مدار الساعة لتلقى طلباتكم واستفساراتكم والرد عليها سواء من خلال الواتساب، السوشيال ميديا، الايميل الإلكتروني.                </p>
               </div>
             </div>
 
@@ -139,8 +133,7 @@ export default function OfferYou() {
                 <i className="fa-regular fa-clock" style={styles.icon}></i>
                 <h3 style={{ color: "#0e776a" }}>الالتزام</h3>
                 <p className='fs-6 fw-bold'>
-                  نلتزم بالمواعيد والاتفاقات والتزامنا ينعكس على أعمالنا ونتميز ونبدع ودايم نفكر خارج الصندوق وبطرق غير تقليدية.
-                </p>
+                الالتزام بالمواعيد والاتفاقات هو اهم اولوياتنا، والحفاظ على قيمنا من صدق وامانة حتى نحقق الجودة فى اعمالنا.                </p>
               </div>
             </div>
           </div>

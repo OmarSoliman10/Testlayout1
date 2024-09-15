@@ -10,6 +10,7 @@ import { faMapMarkerAlt, faEnvelope, faPhone } from '@fortawesome/free-solid-svg
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+
 export default function Contact() {
 
   const { ref: titleRef, inView: titleInView } = useInView({
@@ -126,7 +127,7 @@ export default function Contact() {
 
       {/* القسم الأول */}
       <motion.div
-        style={{ backgroundColor: 'dark', color: '#1e1e1e', padding: '50px 0' }}
+        style={{ backgroundColor: 'dark', color: '#1e1e1e', padding: '40px 0' }}
         initial="hidden"
         animate={titleInView ? "visible" : "hidden"}
         variants={titleVariants}
@@ -137,7 +138,6 @@ export default function Contact() {
           <Row className="text-center ">
             <Col>
               <h1 style={{ color: '#0e776a' }} className='fw-bolder'>كن علي اتصال دائم بنا</h1>
-              <p className='fw-bolder' style={{ color: '#1e1e1e' }}>تواصل معنا ولا تشيل أي هم</p>
             </Col>
           </Row>
         </Container>
@@ -158,8 +158,7 @@ export default function Contact() {
                 onClick={() => window.location.href = 'tel:01033640271'}
               >
                 <FontAwesomeIcon icon={faPhone} size="2x" color="#ccaf55" />
-                <h4 className="mt-3" style={{ color: 'white' }}>الجوال</h4>
-                <p className='pointer fw-bolder mt-3' style={{ color: '#ccaf55' }}>01033640271</p>
+                <p className='pointer fw-bolder mt-3 ' style={{ color: '#ffffff' }}>01033640271</p>
               </div>
             </Col>
             <Col md={4} className="mb-4">
@@ -168,15 +167,13 @@ export default function Contact() {
                 onClick={() => window.location.href = 'mailto:layoutegco@gmail.com'}
               >
                 <FontAwesomeIcon icon={faEnvelope} size="2x" color="#ccaf55" />
-                <h4 className="mt-3" style={{ color: 'white' }}>الإيميل</h4>
-                <p className='pointer fw-bolder mt-3' style={{ color: '#ccaf55' }}>layoutegco@gmail.com</p>
+                <p className='pointer fw-bolder mt-3' style={{ color: '#ffffff' }}>layoutegco@gmail.com</p>
               </div>
             </Col>
             <Col md={4} className="mb-4">
               <div style={{ backgroundColor: '#243f3b', padding: '20px', borderRadius: '10px', border: '1px solid white' }}>
                 <FontAwesomeIcon icon={faMapMarkerAlt} size="2x" color="#ccaf55" />
-                <h4 className="mt-3" style={{ color: 'white' }}>العنوان</h4>
-                <p className='fw-bolder mt-3' style={{ color: '#ccaf55' }}>الفيوم</p>
+                <p className='fw-bolder mt-3' style={{ color: '#ffffff' }}>الفيوم</p>
               </div>
             </Col>
           </Row>

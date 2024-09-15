@@ -1,15 +1,9 @@
-
+/* navbar */
 ul li a:hover{
   color: #ccaf55 !important;
 }
 
-header{
-  background-image: url(../src/img/photo_5899900492258068399_y.jpg);
-  height: 100vh ;
-  background-size: cover;
-  background-position: center;
-  
-}
+
 .btn-custom{
   display: inline-block;
   padding: 10px 21px;
@@ -28,8 +22,183 @@ header{
   color: #ffffff;
 }
 
+  /*--------------------------------------------------------------
+/*--------------------------------------------------------------
+# home Section
+--------------------------------------------------------------*/
 
-/* {/* تحت navbar */ 
+.hero {
+  width: 100%;
+  min-height: 85vh;
+  position: relative;
+  padding: 120px 0 120px 0;
+  display: flex;
+  align-items: center;
+}
+
+.hero .hero-bg {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero:before {
+  content: "";
+  background: color-mix(in srgb, #243f3b , transparent 10%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+}
+
+
+.hero h1 {
+  margin: 0%;
+  font-size: 63px; /* الحجم للشاشات الكبيرة */
+  letter-spacing: 8px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #ffffff; /* اللون مباشرة */
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 47px !important; /* حجم أصغر للشاشات الصغيرة (الموبايلات) */
+  }
+}
+
+
+
+.hero  span {
+  color: #ffffff; /* اللون مباشرة */
+  font-size: 40px;
+  border-bottom: 3px solid #1acc8d; /* استبدال var(--accent-color) بالقيمة */
+}
+@media (max-width: 768px) {
+  .hero span {
+    font-size: 25px !important; /* حجم أصغر للشاشات الصغيرة (الموبايلات) */
+  }
+}
+
+
+
+.hero p {
+  color: #ffffff; /* استبدال color-mix بـ rgba */
+  margin: 15px 0 30px 0;
+  font-size: 19px;
+  font-weight: 400;
+}
+
+
+
+.hero .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .hero p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  .hero .btn-watch-video {
+    font-size: 13px;
+  }
+}
+
+.hero .hero-waves {
+  display: block;
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.hero .wave1 use {
+  animation: move-forever1 10s linear infinite;
+  animation-delay: -2s;
+  fill: #ffffff; /* استبدال var(--contrast-color) بالقيمة */
+  opacity: 0.6;
+}
+
+.hero .wave2 use {
+  animation: move-forever2 8s linear infinite;
+  animation-delay: -2s;
+  fill: #ccaf55; /* استبدال var(--contrast-color) بالقيمة */
+  opacity: 0.6;
+}
+
+.hero .wave3 use {
+  animation: move-forever3 6s linear infinite;
+  animation-delay: -2s;
+  fill: #ffffff; /* استبدال var(--contrast-color) بالقيمة */
+}
+
+@keyframes move-forever1 {
+  0% {
+    transform: translate(85px, 0%);
+  }
+
+  100% {
+    transform: translate(-90px, 0%);
+  }
+}
+
+@keyframes move-forever2 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
+@keyframes move-forever3 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@media (max-width: 768px) {
+  .hero-img {
+    display: none;
+  }
+}
+
+
+
+
 
   /*--------------------------------------------------------------
   # فريقنا
@@ -285,172 +454,3 @@ background-color:#243f3b;
 
 
 
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
-.hero {
-  width: 100%;
-  min-height: 70vh;
-  position: relative;
-  padding: 120px 0 120px 0;
-  display: flex;
-  align-items: center;
-}
-
-.hero .hero-bg {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.hero:before {
-  content: "";
-  background: color-mix(in srgb, #243f3b , transparent 10%);
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-}
-
-.hero .container {
-  position: relative;
-  z-index: 3;
-}
-
-
-.hero h1 {
-  margin: 0%;
-  font-size: 63px; /* الحجم للشاشات الكبيرة */
-  letter-spacing: 8px;
-  font-weight: 700;
-  line-height: 56px;
-  color: #ffffff; /* اللون مباشرة */
-}
-
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 47px !important; /* حجم أصغر للشاشات الصغيرة (الموبايلات) */
-  }
-}
-
-
-
-.hero  span {
-  color: #ffffff; /* اللون مباشرة */
-  border-bottom: 3px solid #1acc8d; /* استبدال var(--accent-color) بالقيمة */
-}
-
-.hero p {
-  color: #ffffff; /* استبدال color-mix بـ rgba */
-  margin: 15px 0 30px 0;
-  font-size: 19px;
-  font-weight: 400;
-}
-
-
-
-
-
-
-.hero .animated {
-  animation: up-down 2s ease-in-out infinite alternate-reverse both;
-}
-
-@media (max-width: 640px) {
-  .hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-
-  .hero p {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
-  }
-
-  .hero .btn-watch-video {
-    font-size: 13px;
-  }
-}
-
-.hero .hero-waves {
-  display: block;
-  width: 100%;
-  height: 60px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 3;
-}
-
-.hero .wave1 use {
-  animation: move-forever1 10s linear infinite;
-  animation-delay: -2s;
-  fill: #ffffff; /* استبدال var(--contrast-color) بالقيمة */
-  opacity: 0.6;
-}
-
-.hero .wave2 use {
-  animation: move-forever2 8s linear infinite;
-  animation-delay: -2s;
-  fill: #ccaf55; /* استبدال var(--contrast-color) بالقيمة */
-  opacity: 0.6;
-}
-
-.hero .wave3 use {
-  animation: move-forever3 6s linear infinite;
-  animation-delay: -2s;
-  fill: #ffffff; /* استبدال var(--contrast-color) بالقيمة */
-}
-
-@keyframes move-forever1 {
-  0% {
-    transform: translate(85px, 0%);
-  }
-
-  100% {
-    transform: translate(-90px, 0%);
-  }
-}
-
-@keyframes move-forever2 {
-  0% {
-    transform: translate(-90px, 0%);
-  }
-
-  100% {
-    transform: translate(85px, 0%);
-  }
-}
-
-@keyframes move-forever3 {
-  0% {
-    transform: translate(-90px, 0%);
-  }
-
-  100% {
-    transform: translate(85px, 0%);
-  }
-}
-
-@keyframes up-down {
-  0% {
-    transform: translateY(10px);
-  }
-
-  100% {
-    transform: translateY(-10px);
-  }
-}
-@media (max-width: 768px) {
-  .hero-img {
-    display: none;
-  }
-}
