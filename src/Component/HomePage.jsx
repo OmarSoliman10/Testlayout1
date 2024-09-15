@@ -4,6 +4,8 @@ import ServiceUs from './ServiceUs';
 import Contact from './Contact';
 
 import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
 import OfferYou from './OfferYou';
 import Possibilities from './Possibilities';
 import heroBg from '../img/hero-bg-2.jpg'; // استيراد الصورة
@@ -14,27 +16,36 @@ import LOGO from '../../src/img//LOGO.png';
 export default function HomePage() {
 
 
-  const textVariant = {
-    hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut" } },
-  };
+  // const textVariant = {
+  //   hidden: { opacity: 0, x: -100 },
+  //   visible: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut" } },
+  // };
 
-  const logoVariant = {
-    hidden: { opacity: 0, y: -100 },  // تبدأ من الأعلى (y: -100)
-    visible: { opacity: 1, y: 0, transition: { duration: 1.3, ease: "easeOut" } },
-  };
+  // const logoVariant = {
+  //   hidden: { opacity: 0, y: -100 },  // تبدأ من الأعلى (y: -100)
+  //   visible: { opacity: 1, y: 0, transition: { duration: 1.3, ease: "easeOut" } },
+  // };
 
-  const imgVariant = {
+  // const imgVariant = {
+  //   hidden: { opacity: 0, scale: 0.8 },
+  //   visible: { opacity: 1, scale: 1, transition: { duration: 1.2, ease: "easeOut" } },
+  // };
+
+
+  // const paragraphVariant = {
+  //   hidden: { opacity: 0, y: 100 },
+  //   visible: { opacity: 1, y: 0, transition: { duration: 1.3, ease: "easeOut" } },
+  // };
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,  // الحركة تحدث مرة واحدة فقط
+    threshold: 0.01,    // النسبة المطلوبة لظهور العنصر على الشاشة (1% من العنصر يجب أن يكون مرئيًا)
+  });
+
+  const containerVariants = {
     hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 1.2, ease: "easeOut" } },
+    visible: { opacity: 1, scale: 1 }
   };
-
-
-  const paragraphVariant = {
-    hidden: { opacity: 0, y: 100 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1.3, ease: "easeOut" } },
-  };
-
 
   return (<>
 {/* تحت navbar */}
@@ -42,7 +53,13 @@ export default function HomePage() {
  <section id="hero" className="hero section dark-background">
       <img src={heroBg} alt="" className="hero-bg w-100" />
 
-      <div className="container">
+      <div className="container"           
+          ref={ref}
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          transition={{ duration: 1 }}>
+
         <div className="row gy-4 justify-content-between">
           
           <motion.div 
@@ -50,27 +67,32 @@ export default function HomePage() {
             data-aos="zoom-out" 
             data-aos-delay="100" 
             style={{ display: window.innerWidth <= 768 ? 'none' : 'block' }}
-            initial="hidden"
-            animate="visible"
-            variants={imgVariant}  // حركة تكبير للصورة
           >
             <img src={heroImg} className="img-fluid animated" alt="" />
           </motion.div>
 
           <motion.div 
             className="col-lg-6 d-flex flex-column justify-content-center" 
-            data-aos="fade-in"
-            initial="hidden"
-            animate="visible"
-            variants={textVariant}  // حركة دخول للنص من اليسار
-          >
-            <motion.div style={{ width: "60%" }} variants={logoVariant}>  {/* حركة دوران للّوجو */}
+            data-aos="fade-in">
+
+            <motion.div style={{ width: "60%" }}
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={inView ? { opacity: 1, y: 0 } : {}}
+                        transition={{ duration: 1 }}
+            >  {/* حركة دوران للّوجو */}
               <img src={LOGO} className="w-100" alt="" />
             </motion.div>
-            <motion.span className="fw-bold w-75 my-2" variants={textVariant}>
+
+            <motion.span className="fw-bold w-75 my-2" 
+            initial={{ opacity: 0, y: -50 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 1 }}>
               شركة تسويق إلكتروني
             </motion.span>
-            <motion.p className="mt-2 fw-bold" variants={paragraphVariant}>
+            <motion.p className="mt-2 fw-bold"             
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 1, delay: 0.5 }}>
               نقدم حلول مبتكرة واستراتيجيات مدروسة لتحويل علامتك التجارية الى رمز يثق به الناس.
             </motion.p>
           </motion.div>
