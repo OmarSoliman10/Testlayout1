@@ -29,7 +29,7 @@ ul li a:hover{
 
 .hero {
   width: 100%;
-  min-height: 85vh;
+  min-height: 100vh;
   position: relative;
   padding: 120px 0 120px 0;
   display: flex;

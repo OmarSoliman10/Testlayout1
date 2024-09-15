@@ -1,6 +1,8 @@
 import React from 'react';
 import ServiceUs from './ServiceUs';
+
 import Contact from './Contact';
+
 import { motion } from 'framer-motion';
 import OfferYou from './OfferYou';
 import Possibilities from './Possibilities';
@@ -10,6 +12,7 @@ import LOGO from '../../src/img//LOGO.png';
 
 
 export default function HomePage() {
+
 
   const textVariant = {
     hidden: { opacity: 0, x: -100 },
@@ -37,11 +40,7 @@ export default function HomePage() {
 {/* تحت navbar */}
 
  <section id="hero" className="hero section dark-background">
-      <motion.img src={heroBg} alt="" className="hero-bg w-100" 
-        initial="hidden" 
-        animate="visible" 
-        variants={imgVariant}  // حركة مختلفة لصورة الخلفية
-      />
+      <img src={heroBg} alt="" className="hero-bg w-100" />
 
       <div className="container">
         <div className="row gy-4 justify-content-between">
